@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Cecy;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Cecy\Planning;
@@ -22,32 +21,14 @@ class PlanningController extends Controller
 
     public function create(Request $request)
     {
-        $planning = new Planning;
-
-        $planning->capacity = intval($request['capacity']);
-        $planning->classroom_id = $request['classroom_id'];
+        $planning = new Planning;     
         $planning->code = strtoupper(trim($request['code']));
-        $planning->code_certificate = strtoupper(trim($request['code_certificate']));
-        $planning->course_id = $request['course_id'];
-        $planning->days = $request['days'];
-        $planning->develop_day_id = $request['develop_day_id'];
-        $planning->end_time_id = $request['end_time_id'];
-        $planning->fechaCreacion = $request['fechaCreacion'];
-        $planning->fechaFinal = $request['fechaFinal'];
-        $planning->fechaFinalizacion = $request['fechaFinalizacion'];
-        $planning->fechaInicio = $request['fechaInicio'];
-        $planning->instructor_id= $request['instructor_id'];
-        $planning->lista_necesidades_planning = trim($request['lista_necesidades_planning']);
-        $planning->paralel_id = $request['paralel_id'];
-        $planning->record = $request['record'];
-        $planning->resumen_planning = $request['resumen_planning'];
-        $planning->school_period_id = $request['school_period_id'];
-        $planning->start_time_id = $request['start_time_id'];
-        $planning->state_certificate = $request['state_certificate'];
-        $planning->workday_type_id = $request['workday_type_id'];
-        $planning->state = 1;
+        $planning->course_id = $request['course_id'];  
+        $planning->dateCreation = $request['dateCreation']; 
+        $planning->list_needs_planning = trim($request['list_needs_planning']);
         $planning->teacher_id = $request['teacher_id'];
-        $planning->status_cecy_id = $request['status_cecy_id'];
+        $planning->school_period_id = $request['school_period_id'];
+        $planning->state = 2;  
 
         $planning->save();
 
@@ -74,10 +55,8 @@ class PlanningController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {    
     }
-
     /**
      * Display the specified resource.
      *
@@ -88,30 +67,53 @@ class PlanningController extends Controller
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        $course_id = $request['id'];
+        $planning = Course::select('courses.*', 'plannings.id as planning_id', 'plannings.*' )
+                                    ->where('courses.id', $course_id)
+                                    ->join('plannings', 'courses.id', 'plannings.course_id')
+                                    ->get();
+        return $planning;
     }
-
     /**
-     * Update the specified resource in storage.
+     * Show the form for editing the specified resource.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
-    }
+        $planning = Planning::findOrFail($request['planning_id']);
+        $planning->code = strtoupper(trim($request['code']));
+        $planning->course_id = $request['course_id'];
+        $planning->dateCreation = $request['dateCreation'];
+        $planning->list_needs_planning = trim($request['list_needs_planning']);
+        $planning->teacher_id = $request['teacher_id'];
+        $planning->school_period_id = $request['school_period_id'];
+        $planning->state = 2;  
+        
+        $planning->save();
 
+        $course = Course::findOrFail($request['course_id']);
+
+        $course->code = strtoupper(trim($request['code']));
+        
+        $course->save();
+
+        return response()->json([
+            'data' => $planning->id,
+            'msg' => [
+                'summary' => 'success',
+                'detail' => 'Planificación Editada Exitosamente',
+                'code' => '200'
+            ]], 200);
+    }
     /**
      * Remove the specified resource from storage.
      *

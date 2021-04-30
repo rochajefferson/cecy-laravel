@@ -4,11 +4,9 @@ namespace App\Models\Ignug;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use OwenIt\Auditing\Contracts\Auditable;
 
-class Career extends Model implements Auditable
+class Career extends Model
 {
-    use \OwenIt\Auditing\Auditable;
     use HasFactory;
 
     protected $connection = 'pgsql-ignug';
@@ -24,7 +22,7 @@ class Career extends Model implements Auditable
         'acronym',
     ];
 
-    public function institution()
+   /*  public function institution()
     {
         return $this->belongsTo(Institution::class);
     }
@@ -42,5 +40,5 @@ class Career extends Model implements Auditable
     public function state()
     {
         return $this->belongsTo(State::class);
-    }
+    } */
 }

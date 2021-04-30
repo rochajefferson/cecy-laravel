@@ -15,10 +15,15 @@ class Planning extends Model
 
     protected $fillable = 
     [
-        "capacity","classroom_id","code","code_certificate","course_id","days","develop_day_id",
-        "end_time_id","fechaCreacion","fechaFinal","fechaFinalizacion","fechaInicio","instructor_id",
-        "lista_necesidades_planning","paralel_id","record","resumen_planning","school_period_id",
-        "start_time_id","state_certificate","status_cecy_id","teacher_id","workday_type_id",'created_at','updated_at'
+        "code",
+        "course_id",
+        "dateCreation",
+        "list_needs_planning",
+        "school_period_id", 
+        "teacher_id",
+        'state',
+        'created_at',
+        'updated_at'
     ];
 
     protected $guarded = 

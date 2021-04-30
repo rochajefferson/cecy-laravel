@@ -14,8 +14,9 @@ class CombosSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-            //status
+    
+     {
+           //status
             Catalogue::factory()->create([
                 'code' => '10',
                 'name' => 'en proceso',
@@ -359,6 +360,414 @@ class CombosSeeder extends Seeder
                 'type' => 'career_modality',
                 'state_id' => 1,
             ]);
+            Catalogue::factory()->create([
+                'code' => '63',
+                'name' => 'SOFTWARE',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+
+            Catalogue::factory()->create([
+                'code' => '64',
+                'name' => 'PRIMERO',
+                'type' => 'academic_period',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '65',
+                'name' => 'SEGUNDO',
+                'type' => 'academic_period',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '66',
+                'name' => 'TERCERO',
+                'type' => 'academic_period',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '67',
+                'name' => 'CUARTO',
+                'type' => 'academic_period',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '68',
+                'name' => 'QUINTO',
+                'type' => 'academic_period',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '69',
+                'name' => 'SEXTO',
+                'type' => 'academic_period',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '70',
+                'name' => 'TECNICO',
+                'type' => 'course_type',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '71',
+                'name' => 'ADMINISTRATIVO',
+                'type' => 'course_type',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '72',
+                'name' => 'JOVEN',
+                'type' => 'participant_type',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '73',
+                'name' => 'ADULTO',
+                'type' => 'participant_type',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '74',
+                'name' => 'JOVEN-ADULTO',
+                'type' => 'participant_type',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '75',
+                'name' => 'TRANSPORTE Y LOGÍSTICA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '76',
+                'name' => 'PROCESOS INDUSTRIALES',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '77',
+                'name' => 'MECÁNICA INDUSTRIAL Y MINERÍA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '78',
+                'name' => 'MECÁNICA AUTOMOTRIZ',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '79',
+                'name' => 'COMUNICACIÓN Y ARTES GRÁFICAS',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '80',
+                'name' => 'ESPECIES ACUÁTICAS Y PESCA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '81',
+                'name' => 'ELECTRICIDAD Y ELECTRÓNICA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '82',
+                'name' => 'EDUCACIÓN Y CAPACITACIÓN',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '83',
+                'name' => 'FORESTAL, ECOLOGÍA Y AMBIENTE',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '84',
+                'name' => 'CONSTRUCCIÓN E INFRAESTRUCTURA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '85',
+                'name' => 'FINANZAS, COMERCIO Y VENTAS',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '86',
+                'name' => 'TECNOLOGÍAS DE LA INFORMACIÓN Y COMUNICACIÓN',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '87',
+                'name' => 'ALIMENTACIÓN, GASTRONOMÍA Y TURISMO',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '88',
+                'name' => 'ZOOTECNIA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '89',
+                'name' => 'AGRONOMÍA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '90',
+                'name' => 'ADMINISTRACIÓN Y LEGISLACIÓN',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '91',
+                'name' => 'TURISMO',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '92',
+                'name' => 'DESARROLLO DE SOFTWARE',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '93',
+                'name' => 'INGLES',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '94',
+                'name' => 'ARTES Y ARTESANÍA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '95',
+                'name' => 'SERVICIOS SOCIOCULTURALES Y A LA COMUNIDAD',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '96',
+                'name' => 'INDUSTRIA AGROPECUARIA',
+                'type' => 'area',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '97',
+                'name' => 'IDIOMAS',
+                'type' => 'specialty',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '98',
+                'name' => 'TECNOLOGIA',
+                'type' => 'specialty',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '99',
+                'name' => 'PEDAGOGIA',
+                'type' => 'specialty',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '100',
+                'name' => 'MARZO-JUNIO',
+                'type' => 'school_period',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '101',
+                'name' => 'ENERO-MARZO',
+                'type' => 'school_period',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '102',
+                'name' => 'JUNIO-SEPTIEMBRE',
+                'type' => 'school_period',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '103',
+                'name' => 'LUNES-VIERNES',
+                'type' => 'day',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '104',
+                'name' => 'DOMINGO',
+                'type' => 'day',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '105',
+                'name' => 'SABADOS',
+                'type' => 'day',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '106',
+                'name' => 'LUNES-DOMINGO',
+                'type' => 'day',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '107',
+                'name' => '7:00',
+                'type' => 'start_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '108',
+                'name' => '8:00',
+                'type' => 'start_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '109',
+                'name' => '9:00',
+                'type' => 'start_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '110',
+                'name' => '10:00',
+                'type' => 'start_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '111',
+                'name' => '11:00',
+                'type' => 'start_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '112',
+                'name' => '12:00',
+                'type' => 'start_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '113',
+                'name' => '12:00',
+                'type' => 'end_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '114',
+                'name' => '13:00',
+                'type' => 'end_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '115',
+                'name' => '14:00',
+                'type' => 'end_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '116',
+                'name' => '15:00',
+                'type' => 'end_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '117',
+                'name' => '16:00',
+                'type' => 'end_time',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '118',
+                'name' => '17:00',
+                'type' => 'end_time',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '119',
+                'name' => 'A',
+                'type' => 'paralel',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '120',
+                'name' => 'B',
+                'type' => 'paralel',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '121',
+                'name' => 'C',
+                'type' => 'paralel',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '122',
+                'name' => 'D',
+                'type' => 'paralel',
+                'state_id' => 1,
+            ]); Catalogue::factory()->create([
+                'code' => '123',
+                'name' => 'MATUTINA',
+                'type' => 'workday',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '124',
+                'name' => 'VESPERTINA',
+                'type' => 'workday',
+                'state_id' => 1,
+            ]);Catalogue::factory()->create([
+                'code' => '125',
+                'name' => 'NOCTURNA',
+                'type' => 'workday',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '126',
+                'name' => 'GENERADO',
+                'type' => 'status_cecy',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '127',
+                'name' => 'APROBADO',
+                'type' => 'status_cecy',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '128',
+                'name' => 'INACTIVO',
+                'type' => 'status_cecy',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '129',
+                'name' => 'RECHAZADO',
+                'type' => 'status_cecy',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '130',
+                'name' => 'AULA 1',
+                'type' => 'classroom',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '131',
+                'name' => 'AULA 2',
+                'type' => 'classroom',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '132',
+                'name' => 'LABORATORIO 1',
+                'type' => 'classroom',
+                'state_id' => 1,
+            ]);
+            Catalogue::factory()->create([
+                'code' => '133',
+                'name' => 'LABORATORIO 2',
+                'type' => 'classroom',
+                'state_id' => 1,
+            ]);
+            
+
+
 
     }
 }
