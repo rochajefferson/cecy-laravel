@@ -5,13 +5,13 @@ namespace App\Models\Cecy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Participant extends Model
+class Teacher extends Model
 {
     protected $connection = 'pgsql-cecy';
     
     use HasFactory;
 
-    protected $table = 'participants';
+    protected $table = 'teachers';
 
     protected $fillable = 
     [

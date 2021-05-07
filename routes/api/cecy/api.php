@@ -46,3 +46,6 @@ Route::post('/plannig_details/delete', [PlanningDetailController::class, 'destro
 
 //VERIFICAR PARTICIPANTE
 Route::post('/participant/verified', [ParticipantController::class, 'index']);
+Route::get('/participant/load', [ParticipantController::class, 'load']);
+Route::post('/participant/create', [ParticipantController::class, 'store']);
+

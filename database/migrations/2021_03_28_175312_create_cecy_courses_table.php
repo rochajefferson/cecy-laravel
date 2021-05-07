@@ -21,7 +21,7 @@ class CreateCecyCoursesTable extends Migration
             $table->double('cost')->nullable();
             $table->integer('hours_duration')->nullable();
             $table->integer('capacity')->nullable();
-            $table->string('abbreviation', 150)->nullable();
+            $table->string('abbreviation', 150)->unique();
             $table->string('place', 150)->nullable();
             $table->string('resume', 150)->nullable();
             $table->integer('career_id')->nullable();
@@ -40,14 +40,14 @@ class CreateCecyCoursesTable extends Migration
             $table->longText('list_bibliographic')->nullable();
             $table->longText('list_needs')->nullable();
             $table->longText('list_prerequisites')->nullable();           
-            $table->longText('list_requeriments ')->nullable();
-            $table->longText('list_main_topics ')->nullable();
+            $table->longText('list_requeriments')->nullable();
+            $table->longText('list_main_topics')->nullable();
             $table->longText('list_subtopics')->nullable();
             $table->longText('list_cross_topics')->nullable();
             $table->longText('list_evaluations_diagnostic')->nullable();
             $table->longText('list_evaluations_process')->nullable();
             $table->longText('list_evaluations_final')->nullable();            
-            $table->longText('list_facilities ')->nullable();
+            $table->longText('list_facilities')->nullable();
             $table->longText('list_phase_theore')->nullable();
             $table->longText('list_phase_practical')->nullable(); 
             $table->string('objective', 150)->nullable();

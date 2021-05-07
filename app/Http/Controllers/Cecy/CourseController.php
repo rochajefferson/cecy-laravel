@@ -30,7 +30,6 @@ class CourseController extends Controller
         return $course;
     }
 
-
     public function edit(Request $request){
         $course_id = $request['id'];
         $course = Course::where('id', $course_id)->get();
@@ -93,8 +92,6 @@ class CourseController extends Controller
         $course->status = 1;
 
         $course->save();
-        
-        Log::debug($course);
 
         return response()->json([
             'data' => $course->id,

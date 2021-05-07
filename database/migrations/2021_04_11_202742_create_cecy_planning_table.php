@@ -18,7 +18,7 @@ class CreateCecyPlanningTable extends Migration
             $table->string('code')->nullable();
             $table->integer('course_id')->nullable();           
             $table->date('dateCreation')->nullable();          
-            $table->longText('list_needs_planning ')->nullable();         
+            $table->longText('list_needs_planning')->nullable();         
             $table->integer('school_period_id')->nullable();
             $table->integer('teacher_id')->nullable();
             $table->integer('status_cecy_id')->nullable();      

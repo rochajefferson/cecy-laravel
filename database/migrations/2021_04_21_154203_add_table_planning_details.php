@@ -18,7 +18,7 @@ class AddTablePlanningDetails extends Migration
         $table->integer('course_id')->nullable();  
         $table->integer('planning_id')->nullable();  
         $table->date('dateFinal')->nullable();
-        $table->date('dateEnd ')->nullable();
+        $table->date('dateEnd')->nullable();
         $table->date('dateStart')->nullable();
         $table->string('days')->nullable();
         $table->integer('develop_day_id')->nullable();
